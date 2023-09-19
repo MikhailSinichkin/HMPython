@@ -13,16 +13,20 @@ a_pro = list()
 for i in range(d):
     a_pro.append(a1) 
     a1 = a1 + n
-    
-    
-# def a_pro(a1, n, d):
+print(a_pro) 
+
+# РЕШЕНИЕ РЕКУРСИЕЙ  
+# list_2 =[]    
+# def recursion(a1, n, d):
 #     if d == 0:
 #         return a1
-#     return a_pro(a1, n, d - 1) + (n-1) * d 
-#     a_pro.append(a1, n, d)
-    
-    
-print(a_pro)
+#     else:
+#         print(a1 - n + n, end = " ")
+#     return recursion(a1 + n, n, d-1)
+
+
+# print(recursion(a1, n, d))
+
 
 
 
