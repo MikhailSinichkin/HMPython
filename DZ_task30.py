@@ -9,7 +9,11 @@
 a1 = int(input("Введите первое число число: "))
 n = int(input("Введите разность: "))
 d = int(input("Введите количество элементов: "))
-
+a_pro = list()
+for i in range(d):
+    a_pro.append(a1) 
+    a1 = a1 + n
+print(a_pro) 
 
 # РЕШЕНИЕ РЕКУРСИЕЙ  
   
