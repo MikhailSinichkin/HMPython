@@ -16,7 +16,7 @@ for i in range(d):
 print(a_pro) 
 
 # РЕШЕНИЕ РЕКУРСИЕЙ  
-# list_2 =[]    
+  
 # def recursion(a1, n, d):
 #     if d == 0:
 #         return a1
