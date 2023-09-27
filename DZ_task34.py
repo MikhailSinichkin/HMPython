@@ -9,21 +9,20 @@
 # Ввод: Вывод:
 # пара-ра-рам рам-пам-папам па-ра-па-дам Парам пам-пам
 
-string = input("Введите стих Винни-Пуха: ")
-list_1 = string.split()
-list_2 = list()
-d = {1: "а"}
-for i in range(len(list_1)):
-    result = 0
-    for letter in list_1[i]:
-        for points, letters in d.items():
-            if letter in letters:
-                result += points
-    list_2.append(result)
-print(list_2)
-for i in range(len(list_2)):
-    if list_2[i] == list_2[i-1]:
-        answer = "Парам пам-пам"
+stroka = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
+volwes = ['а', 'о', 'э', 'е', 'и', 'ы', 'у', 'ё', 'ю', 'я']
+parts = stroka.split()
+itog = list()
+for item in parts:
+    k = 0
+    for letter in item:
+        if letter in volwes:
+            k += 1
+    itog.append(k)
+if len(itog) == 1:
+    print("Количество фраз должно быть больше одной!")
+else:
+    if len(set(itog)) == 1:
+        print('Парам пам-пам')
     else:
-        answer = "Пам парам"
-print(answer)
+        print('Пам парам')
