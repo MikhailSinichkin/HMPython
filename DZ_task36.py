@@ -13,11 +13,16 @@
 #  5 10 15 20 25 30
 #  6 12 18 24 30 36 
 
-def print_operation_table(operation, num_rows=6, num_columns=6):
-    for i in range(1, num_rows + 1):
-        for j in range(1, num_columns + 1):
-            print(operation(i, j), end=" ")
-        print()
+def print_operation_table(operation, num_rows, num_columns):
+    if num_rows < 2:
+        print("ОШИБКА! Размерности таблицы должны быть больше 2!")
+    else:
+        print(*range(1,num_columns + 1))
+        for i in range(2, num_rows + 1):
+            print(i, end=" ")
+            for j in range(2, num_columns + 1):
+                print(operation(i, j), end=" ")
+            print()
 
 
 print_operation_table(lambda x, y: x + y, 4, 4)
